@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CEDS 3225</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= csrf_meta_tags %>
+</head>
+<body style="padding-top: 70px;">
+	<div class="container">
+		<% flash.each do |key, value| %>
+			<%= content_tag(:div, value, class: "alert alert-#{key}", style: "margin-top: 20px") %>
+		<% end %>
+		<%= render "layouts/nav" %>
+		<%= yield %>
+		<%= render "layouts/footer" %>
+	</div>
+</body>
+</html>

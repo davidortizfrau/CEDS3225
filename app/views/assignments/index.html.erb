@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-lg-8">
+    <h1 class="page-header">Listing assignments</h1>
+    <% @assignments.each do |a| %>
+
+     <p><a href="<%= a.pdf_file_url %>"><%= a.title %></a></p> 
+    <% end %>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+

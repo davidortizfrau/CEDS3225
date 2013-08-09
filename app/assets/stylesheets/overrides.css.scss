@@ -1,0 +1,53 @@
+div#posts {
+	img {
+		 max-width: 100%;
+	}
+}
+
+h1.page-header {
+	font-weight: 300;
+}
+
+#tag_cloud {
+  width: 400px;
+  line-height: 1.6em;
+  .s { font-weight: 100; font-size: .8em; padding-right: 10px; }
+  .m { font-weight: 300; font-size: 1em; padding-right: 10px; }
+  .l { font-weight: 400; font-size: 1.4em; padding-right: 10px; }
+}
+
+/* footer */
+
+footer {
+	margin: 45px 0 80px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	color: #999;
+	clear: both;
+
+	small {
+		float: left;
+	}
+
+	a {
+		color: #555;
+
+		&:hover {
+			color: #222;
+		}
+	}
+
+	span {
+		color: #555;
+	}
+
+	ul {
+		float: right;
+
+		li {
+			float: left;
+			list-style-type: none;
+			margin-left: 20px;
+		}
+	}
+}

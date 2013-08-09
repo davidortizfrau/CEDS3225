@@ -1,0 +1,49 @@
+<h1 class="page-header">Admin</h1>
+
+<div class="row">
+	<div class="col-lg-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+		    <h3 class="panel-title">Posts</h3>
+		  </div>
+			<table class="table">
+				<% @posts.each do |post| %>
+				  <tr>
+				    <td><%= post.title %></td>
+				    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+				    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				  </tr>
+				<% end %>
+			</table>
+
+			<div class="panel-footer">
+				<%= link_to 'New Post', new_post_path %>
+			</div>
+		</div>	
+	</div>
+
+
+
+	<div class="col-lg-6">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+		    <h3 class="panel-title">Assignments</h3>
+		  </div>
+			<table class="table">
+				<% @assignments.each do |assignments| %>
+				  <tr>
+				    <td><%= assignments.title %></td>
+				    <td><%= link_to 'Edit', edit_assignment_path(assignments) %></td>
+				    <td><%= link_to 'Destroy', assignments, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				  </tr>
+				<% end %>
+			</table>
+
+			<div class="panel-footer">
+				<%= link_to 'New Assignment', new_assignment_path %>
+			</div>
+		</div>	
+	</div>
+</div>
+		
+
