@@ -15,6 +15,6 @@ gem 'jquery-rails'
 gem "rmagick"
 gem "carrierwave"
 gem "fog", "~> 1.3.1"
-gem 'newrelic_rpm'
+# gem 'newrelic_rpm'
 
 gem 'acts-as-taggable-on'
