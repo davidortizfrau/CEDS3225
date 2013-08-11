@@ -6,6 +6,9 @@ class PagesController < ApplicationController
   def resources
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
+    elsif params[:assignment]
+      @assignment = Assignment.find(params[:assignment])
+      @posts = @assignment.posts
     else
       @posts = Post.all
     end

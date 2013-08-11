@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130809175160) do
+ActiveRecord::Schema.define(:version => 20130810205757) do
+
+  create_table "assignment_posts", :force => true do |t|
+    t.integer  "post_id"
+    t.integer  "assignment_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "assignments", :force => true do |t|
     t.string   "title"

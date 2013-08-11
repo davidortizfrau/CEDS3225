@@ -28,8 +28,6 @@
     <%= f.file_field :image_3 %>
   </div>
 
-
-
   <div class="form-group">
     <%= f.label :video, "Video (iframe)" %><br />
     <%= f.text_area :video, class: "form-control", rows:"2" %>
@@ -43,6 +41,16 @@
   <div class="form-group">
     <%= f.label :tag_list, "Tags (separated by commas)" %><br />
     <%= f.text_field :tag_list, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag "Assignments" %><br>
+    <% Assignment.all.each do |a| %>
+
+      <%= hidden_field_tag "post[assignment_ids][]", nil %>
+      <%= check_box_tag "post[assignment_ids][]", a.id, @post.assignment_ids.include?(a.id) %>
+      <%= a.title %><br>  
+    <% end %>
   </div>
 
   <div class="actions">

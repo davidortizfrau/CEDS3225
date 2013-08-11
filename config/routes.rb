@@ -10,6 +10,7 @@ Ceds3225::Application.routes.draw do
   match 'admin' => 'pages#admin'
 
   get 'tags/:tag', to: 'pages#resources', as: :tag
+  # get 'tags/:tag', to: 'pages#resources', as: :tag
   
   
 
