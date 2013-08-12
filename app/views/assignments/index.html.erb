@@ -3,7 +3,7 @@
     <h1 class="page-header">Listing assignments</h1>
     <% @assignments.each do |a| %>
 
-     <p><a href="<%= a.pdf_file_url %>"><%= a.title %></a></p> 
+     <p><a href="<%= a.pdf_file_url %>"><%= a.title %></a> <i style="font-size:.8em">due <%= a.due_date.to_formatted_s(:long) %></i></p> 
     <% end %>
   </div>
   

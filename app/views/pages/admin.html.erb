@@ -30,11 +30,12 @@
 		    <h3 class="panel-title">Assignments</h3>
 		  </div>
 			<table class="table">
-				<% @assignments.each do |assignments| %>
+				<% @assignments.each do |assignment| %>
 				  <tr>
-				    <td><%= assignments.title %></td>
-				    <td><%= link_to 'Edit', edit_assignment_path(assignments) %></td>
-				    <td><%= link_to 'Destroy', assignments, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				    <td><%= assignment.title %></td>
+				    <td><%= assignment.due_date.to_formatted_s(:short) %></td>
+				    <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+				    <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 				  </tr>
 				<% end %>
 			</table>

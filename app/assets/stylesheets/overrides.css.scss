@@ -1,8 +1,27 @@
+
+
 div#posts {
 	img {
 		 max-width: 100%;
 	}
 }
+
+
+
+a#logo {
+	background-image: url('logo.png');
+	background-size: 95%;
+	background-repeat: no-repeat;
+	background-position: 15px 17px;
+	text-indent: -9999px;
+	width: 250px;
+	height: 100px;
+	padding-right: 50px; 
+}
+
+	
+
+
 
 h1.page-header {
 	font-weight: 300;
@@ -16,6 +35,30 @@ h1.page-header {
 
 .navbar {
 	background-color: #fff;
+
+	a.nav-link {
+		border-top: 1px dotted black;
+		margin-left: 45px;
+		padding: 5px 0 0 0;
+		margin-top: 25px;
+		font-weight: 400;
+		font-size: 1.2em;
+	}
+
+
+
+}
+
+h1.page-header {
+	padding: 5px 0;
+	border-top: 1px dotted black;
+	border-bottom: 1px dotted black;
+	margin-bottom: 15px;
+	margin-top: 80px;
+}
+
+#side-panel {
+	margin-top: 80px;
 }
 
 div.side-panel {

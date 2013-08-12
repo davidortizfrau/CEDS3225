@@ -32,7 +32,10 @@
 		<% end %>
 
 	</div>
-  <div class="col-lg-3 col-lg-offset-1">
+
+  <div class="col-lg-3 col-lg-offset-1" id="side-panel">
+  <!-- <div class="col-lg-4"> -->
+
 
   	<div class="side-panel" id="tag_cloud">
   		
@@ -46,8 +49,8 @@
   		<div class="">
   			<h3 class="panel-title">Sort by Assignment</h3>
   		</div>
-  		<% Assignment.all.each do |a| %>
-  			<p><a href="/?assignment=<%= a.id %>"><%= a.title %></a></p>
+  		<% Assignment.next.each do |a| %>
+  			<p><a href="/?assignment=<%= a.id %>"><%= a.title %> </a><i style="font-size:0.8em">due <%= a.due_date.to_formatted_s(:long) %></i></p>
   		<% end %>
   	</div>
 

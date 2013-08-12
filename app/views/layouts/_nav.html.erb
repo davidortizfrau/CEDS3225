@@ -1,13 +1,13 @@
 <nav class="navbar navbar-fixed-top">
 	<div class="container">
-	<a class="navbar-brand" href="<%= root_path %>">CEDS 3225</a>
+	<a id="logo" class="navbar-brand" href="<%= root_path %>">CEDS 3225</a>
 	<ul class="nav navbar-nav pull-right">
 		<% %w(resources assignments syllabus).each do |c| %>
 			<% regex = /#{c}/ %>
 			<% if request.fullpath[regex] %>
-				<li><a id="<%= c %>_active" href="/<%= c %>"><%= c %></a></li>
+				<li><a id="<%= c %>_active" href="/<%= c %>" class="nav-link"><%= c %></a></li>
 			<% else %>
-				<li><a id="<%= c %>" href="/<%= c %>"><%= c %></a></li>
+				<li><a id="<%= c %>" href="/<%= c %>" class="nav-link"><%= c %></a></li>
 				<% regex_root = /^\/$/ %>
 				<% regex_projects = /\/projects/ %>
 				<% if request.fullpath[regex_root] || request.fullpath[regex_projects] %>
