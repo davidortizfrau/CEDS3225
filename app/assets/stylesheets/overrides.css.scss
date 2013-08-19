@@ -144,6 +144,22 @@ div.post {
 	}
 }
 
+/************************** Syllabus **************************/
+
+div#syllabus {
+	a {
+		color: #AF9952;
+		font-family: 'Cardo', serif;
+		font-style: italic; 
+		font-size: 1.2em;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #777;
+	}
+}
+
 /************************** Side Panel ***********************/
 
 #side-panel {
@@ -213,23 +229,23 @@ footer {
 	margin: 45px 0 80px;
 	padding-top: 5px;
 	border-top: 1px solid #eaeaea;
-	color: #999;
+	color: black;
 	clear: both;
 
-	small {
-		float: left;
-	}
 
 	a {
-		color: #555;
+		color: #777;
 
 		&:hover {
 			color: #222;
+			text-decoration: none;
 		}
 	}
 
 	span {
-		color: #555;
+		font-family: 'Cardo', serif;
+		font-style: italic;
+		font-size: 1.2em;
 	}
 
 	ul {
