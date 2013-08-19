@@ -25,3 +25,9 @@
 	</ul>
 	</div>
 </nav>
+
+<% if request.fullpath == root_path %>
+	<script type="text/javascript">
+					$("a#resources").parent("li").html("<a id='resources_active' href='/resources' class='nav-link'>Resources</a>");
+	</script>
+<% end %>

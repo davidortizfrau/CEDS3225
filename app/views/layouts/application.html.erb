@@ -12,10 +12,11 @@
 </head>
 <body style="padding-top: 70px;">
 	<div class="container">
+		
+		<%= render "layouts/nav" %>
 		<% flash.each do |key, value| %>
 			<%= content_tag(:div, value, class: "alert alert-#{key}", style: "margin-top: 20px") %>
 		<% end %>
-		<%= render "layouts/nav" %>
 		<%= yield %>
 		<%= render "layouts/footer" %>
 	</div>

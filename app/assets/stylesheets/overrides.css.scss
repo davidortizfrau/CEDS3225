@@ -1,5 +1,6 @@
 body {
 	font-family: 'Montserrat', sans-serif;
+	margin-top: 30px;
 }
 
 div#posts {
@@ -46,6 +47,11 @@ h1.page-header {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	font-size: 1.8em;
+	padding: 8px 0 7px;
+	border-top: 1px dotted #aaa;
+	border-bottom: 1px dotted #aaa;
+	margin-bottom: 45px;
+	margin-top: 50px;
 }
 
 #tag_cloud {
@@ -53,6 +59,8 @@ h1.page-header {
   .m { font-weight: 300; font-size: 1em;  }
   .l { font-weight: 400; font-size: 1.4em; }
 }
+
+/* ********************* Navbar ********************* */
 
 .navbar {
 	background-color: rgba(255, 255, 255, .95);
@@ -82,23 +90,9 @@ h1.page-header {
 
 }
 
-h1.page-header {
-	padding: 8px 0 7px;
-	border-top: 1px dotted #aaa;
-	border-bottom: 1px dotted #aaa;
-	margin-bottom: 45px;
-	margin-top: 80px;
-}
-
 /************************** Post **************************/
 
 div.post {
-
-	-webkit-border-image:url(/assets/pixel_pattern.png); /* Safari 5 */
-	-o-border-image:url(/assets/pixel_pattern.png); /* Opera */
-	border-image:url(/assets/pixel_pattern.png);
-
-	border-width: 5px;
 
 	margin-bottom: 40px;
 
@@ -108,6 +102,7 @@ div.post {
 		color: #777;
 		font-size: .8em;
 	}
+
 	h3 {
 		font-family: 'Montserrat', sans-serif;
 		font-size: 1.15em; 
@@ -142,6 +137,12 @@ div.post {
 		font-style: italic;
 
 	}
+
+	div.pixel_pattern {
+		height: 7px;
+		background-image: url(/assets/pixel_pattern.png);
+		margin-top: 40px;
+	}
 }
 
 /************************** Syllabus **************************/
@@ -163,7 +164,7 @@ div#syllabus {
 /************************** Side Panel ***********************/
 
 #side-panel {
-	margin-top: 80px;
+	margin-top: 49px;
 }
 
 div.side-panel {
@@ -228,12 +229,16 @@ div.side-panel {
 footer {
 	margin: 45px 0 80px;
 	padding-top: 5px;
-	border-top: 1px solid #eaeaea;
+	border-top: 1px dotted #777;
 	color: black;
 	clear: both;
 
+	small {
+		float:left;
+	}
 
 	a {
+		/*float: left;*/
 		color: #777;
 
 		&:hover {

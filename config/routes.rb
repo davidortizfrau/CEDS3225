@@ -8,6 +8,8 @@ Ceds3225::Application.routes.draw do
   match 'resources' => 'pages#resources'
   match 'syllabus' => 'pages#syllabus'
   match 'admin' => 'pages#admin'
+  match 'contact' => 'pages#contact'
+  match 'send_message' => 'pages#send_message'
 
   get 'tags/:tag', to: 'pages#resources', as: :tag
   # get 'tags/:tag', to: 'pages#resources', as: :tag
