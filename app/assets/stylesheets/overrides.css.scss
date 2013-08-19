@@ -1,4 +1,6 @@
-
+body {
+	font-family: 'Montserrat', sans-serif;
+}
 
 div#posts {
 	img {
@@ -6,25 +8,44 @@ div#posts {
 	}
 }
 
-
+/*a {
+	color: #AF9952;
+}*/
 
 a#logo {
-	background-image: url('logo.png');
-	background-size: 95%;
-	background-repeat: no-repeat;
-	background-position: 15px 17px;
-	text-indent: -9999px;
-	width: 250px;
-	height: 100px;
-	padding-right: 50px; 
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 2.9em;
+	color: #000;
+	margin-top: 30px;
+	margin-right: 0;
+	padding-right: 12px;
+
+	img {
+		max-width: 30px;
+		margin-top: -6px;
+		margin-left: -2px;
+		margin-right: 0px;
+	}
 }
 
-	
+div#msu {
+	font-family: 'Cardo', serif;
+	font-style: italic;
+	font-size: 1.2em;
+	margin-top: 39px;
+	margin-left: -1px;
+	line-height: 16px;
+	float: left;
+	color: #777;
+}
 
 
 
 h1.page-header {
-	font-weight: 300;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 1.8em;
 }
 
 #tag_cloud {
@@ -34,28 +55,96 @@ h1.page-header {
 }
 
 .navbar {
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, .95);
+	/*margin-top: 0;*/
+	padding-bottom: 25px;
 
 	a.nav-link {
-		border-top: 1px dotted black;
-		margin-left: 45px;
-		padding: 5px 0 0 0;
-		margin-top: 25px;
-		font-weight: 400;
-		font-size: 1.2em;
+		border-top: 1px dotted #aaa;
+		margin-left: 35px;
+		padding: 10px 0 0 0;
+		margin-top: 44px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 1.1em;
+		color: #000;
+		/*color: #AF9952;*/
 	}
 
+	a.nav-link:hover {
+		color: #AF9952;
+		/*opacity: .8;*/
+	}
 
+	a#assignments_active, a#resources_active, a#syllabus_active {
+		color: #AF9952;
+	}
 
 }
 
 h1.page-header {
-	padding: 5px 0;
-	border-top: 1px dotted black;
-	border-bottom: 1px dotted black;
-	margin-bottom: 15px;
+	padding: 8px 0 7px;
+	border-top: 1px dotted #aaa;
+	border-bottom: 1px dotted #aaa;
+	margin-bottom: 45px;
 	margin-top: 80px;
 }
+
+/************************** Post **************************/
+
+div.post {
+
+	-webkit-border-image:url(/assets/pixel_pattern.png); /* Safari 5 */
+	-o-border-image:url(/assets/pixel_pattern.png); /* Opera */
+	border-image:url(/assets/pixel_pattern.png);
+
+	border-width: 5px;
+
+	margin-bottom: 40px;
+
+	small.date {
+		font-family: 'Cardo', serif;
+		font-style: italic;
+		color: #777;
+		font-size: .8em;
+	}
+	h3 {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.15em; 
+		margin-top: 5px;
+		border-bottom: 1px dotted #aaa;
+		padding-bottom: 5px;
+		margin-bottom: 30px;
+		margin-top: 0;
+	}
+
+	p.description {
+		margin-top: 10px;
+		font-family: 'Cardo', serif;
+		color: #777;
+		font-size: .9em;
+	}
+
+	p.tags {
+		font-style: 'Montserrat', sans-serif;
+		font-weight: 700;
+
+		a {
+			font-weight: 400;
+			color: #AF9952;
+			font-size: .9em;
+		}
+	}
+
+	a.post_link {
+		color: #AF9952;
+		font-family: 'Cardo', serif;
+		font-style: italic;
+
+	}
+}
+
+/************************** Side Panel ***********************/
 
 #side-panel {
 	margin-top: 80px;
@@ -63,13 +152,17 @@ h1.page-header {
 
 div.side-panel {
 
-	margin-bottom: 25px;
+	margin-bottom: 65px;
 
 	h3 {
-		padding: 10px 0;
-		border-top: 1px dotted black;
-		border-bottom: 1px dotted black;
-		margin-bottom: 15px;
+		padding: 11px 0 10px;
+		border-top: 1px dotted #aaa;
+		border-bottom: 1px dotted #aaa;
+		margin-bottom: 5px;
+		font-family: 'Cardo', serif;
+		font-style: italic;
+		color: #777;
+		font-size: 1.4em;
 	}	
 
 	hr {
@@ -84,7 +177,34 @@ div.side-panel {
 			margin: 0 15px 15px 0;
 			border: 1px solid #eee;
 		}
-	}		
+
+		h5 {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+
+			a {
+				color: #000;
+				font-weight: 700;
+
+				span.subtitle {
+					color: #777;
+					font-weight: 400;
+				}
+			}
+		}
+	}	
+
+	a {
+		color: #AF9952;
+		font-style: 'Montserrat', sans-serif;
+		font-weight: 400;
+	}	
+
+	a:hover {
+
+		text-decoration: none;
+		opacity: .8;
+	}
 }
 
 /************************ footer ************************/
@@ -122,3 +242,5 @@ footer {
 		}
 	}
 }
+
+/************************ end footer ************************/

@@ -1,6 +1,11 @@
 <nav class="navbar navbar-fixed-top">
 	<div class="container">
-	<a id="logo" class="navbar-brand" href="<%= root_path %>">CEDS 3225</a>
+	<a id="logo" class="navbar-brand" href="<%= root_path %>">CEDS 3225 <img src="/assets/icon.png"></a>
+	<div id="msu">
+		<small>
+			MSU Denver_ <br> Integrated Production Techniques
+		</small>
+	</div>
 	<ul class="nav navbar-nav pull-right">
 		<% %w(resources assignments syllabus).each do |c| %>
 			<% regex = /#{c}/ %>
