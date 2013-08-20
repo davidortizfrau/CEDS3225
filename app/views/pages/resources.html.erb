@@ -55,7 +55,7 @@
   			<h3 class="panel-title">Sort by Assignment</h3>
   		</div>
   		<% Assignment.next.each do |a| %>
-  			<p><a href="/?assignment=<%= a.id %>"><%= truncate(a.title, length: 35) %> </a><i style="font-size:0.8em"><%= a.due_date.to_formatted_s(:short) %></i></p>
+  			<p><a href="/?assignment=<%= a.id %>"><%= truncate(a.title, length: 30) %> </a><i style="font-size:0.8em"><%= a.due_date.to_formatted_s(:short) %></i></p>
   		<% end %>
   	</div>
 
