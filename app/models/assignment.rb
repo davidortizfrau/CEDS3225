@@ -6,7 +6,7 @@ class Assignment < ActiveRecord::Base
   has_many :assignment_posts
   has_many :posts , through: :assignment_posts
 
-  default_scope order("due_date")
+  default_scope order("due_date", "created_at")
 
   scope :next, where("due_date >= ?", Date.today).limit(4)
 end

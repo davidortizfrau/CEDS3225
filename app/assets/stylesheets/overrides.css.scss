@@ -150,14 +150,34 @@ div.post {
 div#syllabus {
 	a {
 		color: #AF9952;
-		font-family: 'Cardo', serif;
-		font-style: italic; 
-		font-size: 1.2em;
+		font-family: 'Montserrat', sans-serif;
+		font-style: inherit;
+		font-size: 1em;
 	}
 
 	a:hover {
 		text-decoration: none;
 		color: #777;
+	}
+}
+
+/* **************** Assignments **************** */
+
+#assignments_list {
+	a {
+		color: #AF9952;
+
+	}
+
+	a:hover {
+		color: #777;
+		text-decoration: none;
+	}
+
+	i {
+			font-family: 'Cardo', serif;
+			font-size: 1.1em;
+			color: #777;
 	}
 }
 

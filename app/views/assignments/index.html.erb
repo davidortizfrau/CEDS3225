@@ -1,11 +1,19 @@
+
 <div class="row">
-  <div class="col-lg-8">
-    <h1 class="page-header">Listing assignments</h1>
+  <div class="col-lg-8" style="width:69%" id="assignments_list">
+  	<h1 class="page-header">Listing assignments</h1>
     <% @assignments.each do |a| %>
 
-     <p><a href="<%= a.pdf_file_url %>"><%= a.title %></a> <i style="font-size:.8em">due <%= a.due_date.to_formatted_s(:long) %></i></p> 
+     <p><a href="<%= a.pdf_file_url %>"><%= a.title %></a> <i>due <%= a.due_date.to_formatted_s(:long) %></i></p>
+     <!-- <p>_</p>  -->
+     <hr>
     <% end %>
   </div>
+
+  <div class="col-lg-4" style="margin-top:49px; width:26%; float:right">
+  	<%= render 'pages/book' %>
+  </div>
+  
   
 </div>
 
