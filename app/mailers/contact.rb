@@ -6,8 +6,8 @@ class Contact < ActionMailer::Base
     @email = email
     @content = content
 
-    mail to: "bahrnsbr@msudenver.edu, davidortizfrau@gmail.com", 
-         subject: "#{@name} sent you message from CDES3225 App",
+    mail to: "bahrnsbr@msudenver.edu, geeder@gmail.com", 
+         subject: "#{@name} sent a you message from CDES3225 App",
          from: "#{@email}"
   end
 end
