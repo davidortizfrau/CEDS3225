@@ -45,7 +45,7 @@
 
   <div class="form-group">
     <%= label_tag "Assignments" %><br>
-    <% Assignment.all.each do |a| %>
+    <% Assignment.regular.each do |a| %>
 
       <%= hidden_field_tag "post[assignment_ids][]", nil %>
       <%= check_box_tag "post[assignment_ids][]", a.id, @post.assignment_ids.include?(a.id) %>

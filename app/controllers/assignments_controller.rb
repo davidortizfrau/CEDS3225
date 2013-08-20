@@ -5,7 +5,7 @@ class AssignmentsController < ApplicationController
                                only: [:new, :edit, :destroy, :update]
 
   def index
-    @assignments = Assignment.all
+    @assignments = Assignment.regular
   end
 
 
