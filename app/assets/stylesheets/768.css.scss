@@ -10,7 +10,6 @@ div#posts {
 }
 
 a#logo {
-
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: 2.9em;
@@ -38,17 +37,12 @@ div#msu {
 	color: #777;
 }
 
-/*@media all and (max-width: 768px) {
+@media all and (max-width: 768px) { /* If the viewport is atleast 400px wide the browser will use this style */
 	a#logo {
 		font-size: 1.9em;
-		float: left;
 		margin: 10px auto;		
 	}
-
-	div#msu {
-		font-size: .8em;
-	}
-}*/
+}
 
 
 
@@ -71,33 +65,30 @@ h1.page-header {
 
 /* ********************* Navbar ********************* */
 
-@media screen and (max-width: 480px) {
+.navbar {
+	background-color: rgba(255, 255, 255, .95);
+	/*margin-top: 0;*/
+	padding-bottom: 25px;
 
-	.navbar {
-		background-color: rgba(255, 255, 255, .95);
-		/*margin-top: 0;*/
-		padding-bottom: 25px;
+	a.nav-link {
+		border-top: 1px dotted #aaa;
+		margin-left: 35px;
+		padding: 10px 0 0 0;
+		margin-top: 44px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 1.1em;
+		color: #000;
+		/*color: #AF9952;*/
+	}
 
-		a.nav-link {
-			border-top: 1px dotted #aaa;
-			margin-left: 35px;
-			padding: 10px 0 0 0;
-			margin-top: 44px;
-			font-family: 'Montserrat', sans-serif;
-			font-weight: 700;
-			font-size: 1.1em;
-			color: #000;
-		}
+	a.nav-link:hover {
+		color: #AF9952;
+		/*opacity: .8;*/
+	}
 
-		a.nav-link:hover {
-			color: #AF9952;
-			/*opacity: .8;*/
-		}
-
-		a#assignments_active, a#resources_active, a#syllabus_active {
-			color: #AF9952;
-		}
-
+	a#assignments_active, a#resources_active, a#syllabus_active {
+		color: #AF9952;
 	}
 
 }
@@ -296,33 +287,7 @@ footer {
 	}
 }
 
-
 /************************ end footer ************************/
-
-
-iframe {
-	width: 100%;
-	height: 400px;
-}
-
-@media all and (max-width: 480px) { 
-	iframe {
-		height: 200px;
-	}
-}
-
-@media all and (max-width: 992px) { 
-	#posts {
-		width: 100%;
-	}
-}
-
-@media all and (min-width: 993px) { 
-	#posts {
-		width: 69%;
-	}
-}
-
 
 
 

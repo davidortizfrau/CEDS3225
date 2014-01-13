@@ -1,30 +1,57 @@
-<nav class="navbar navbar-fixed-top">
-	<div class="container">
-	<a id="logo" class="navbar-brand" href="<%= root_path %>">CDES 3225 <img src="/assets/icon.png"></a>
-	<div id="msu">
-		<small>
-			MSU Denver_ <br> Integrated Production Techniques
-		</small>
-	</div>
-	<ul class="nav navbar-nav pull-right">
-		<% %w(resources assignments syllabus).each do |c| %>
-			<% regex = /#{c}/ %>
-			<% if request.fullpath[regex] %>
-				<li><a id="<%= c %>_active" href="/<%= c %>" class="nav-link"><%= c %></a></li>
-			<% else %>
-				<li><a id="<%= c %>" href="/<%= c %>" class="nav-link"><%= c %></a></li>
-				<% regex_root = /^\/$/ %>
-				<% regex_projects = /\/projects/ %>
-				<% if request.fullpath[regex_root] || request.fullpath[regex_projects] %>
-					<script type="text/javascript">
-						$("#portfolio").attr('id', 'portfolio_active')
-					</script>
-				<% end %>
-			<% end %>
-		<% end %>
-	</ul>
-	</div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+  
+  	<div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+
+      <div class="visible-lg">
+        <a id="logo" class="navbar-brand" href="<%= root_path %>">CDES 3225 <img src="/assets/icon.png"></a>
+
+        <div id="msu">
+          <small>
+            MSU Denver_ <br> Integrated Production Techniques
+          </small>
+        </div>
+      </div>
+
+     <!--  <div class="visible-lg">
+        <a class="navbar-brand" href="#">CDES 3225</a>
+      </div> -->
+    </div> 
+
+    <div class="navbar-collapse navbar-ex1-collapse">
+
+    	<ul class="nav navbar-nav pull-right">
+    		<% %w(resources assignments syllabus).each do |c| %>
+    			<% regex = /#{c}/ %>
+    			<% if request.fullpath[regex] %>
+    				<li><a id="<%= c %>_active" href="/<%= c %>" class="nav-link"><%= c %></a></li>
+    			<% else %>
+    				<li><a id="<%= c %>" href="/<%= c %>" class="nav-link"><%= c %></a></li>
+    				<% regex_root = /^\/$/ %>
+    				<% regex_projects = /\/projects/ %>
+    				<% if request.fullpath[regex_root] || request.fullpath[regex_projects] %>
+    					<script type="text/javascript">
+    						$("#portfolio").attr('id', 'portfolio_active')
+    					</script>
+    				<% end %>
+    			<% end %>
+    		<% end %>
+    	</ul>
+
+    </div>
+  </div>
 </nav>
+
 
 <% if request.fullpath == root_path %>
 	<script type="text/javascript">
